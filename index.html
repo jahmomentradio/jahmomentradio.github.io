@@ -1,32 +1,417 @@
 <!DOCTYPE html>
-<html class="no-js">
-<html lang="pt-pt">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jah Moment</title>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Mon Mar 24 2014 19:57:41 GMT+0000 (UTC) -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jah Moment</title>
+  <meta name="keywords" content="radio reggae jahmoment">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/jahmoment.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+  WebFont.load({
+    google: {
+      families: ["Lato:300,400,700"]
+    }
+  });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <script type="text/javascript" src="js/jahmoment.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/52f7f763262711a905000128/530a7099691af66156000860_favicon.ico.png">
+</head>
+<body>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- RÁDIO PLAYER -->
+  <section class="radio-bar" style="display:none; position:fixed; width:100%; top:0">
+    <div class="w-container contmobile">     
+      <audio class="stream" style="max-height:40px; float:left; margin-right:10px; width:200px; margin-top:7px" src="http://185.32.189.221:8238/stream" controls onclick="changeStatus()"></audio>
+      <div class"w-hidden-small w-hidden-tiny streaming-details" style="color:white; text-decoration:none; float:left; margin-top:12px;">
+        <div class="atocar" style="float:left; margin-right:5px">A TOCAR:</div> <a href="http://185.32.189.221:2199/tunein/jahmomen.pls" id="cc_strinfo_song_jahmomen" style="color:#e39725; text-decoration:none; cursor:text" class="cc_streaminfo">Loading..</a>
+      </div>
+      <div class="w-hidden-small w-hidden-tiny ultimas-drop" style="display:inline; float:right; margin-left:-100px; text-align:right; color:white; margin-top:12px; cursor:pointer" onclick="showlist()">ÚLTIMAS TOCADAS
+       <img src="images/icon-hamburguer.png" style="width:20px; height:12px; margin-left:10px; margin-top:-4px"></div>
+       <div id="cc_recenttracks_jahmomen" class="cc_recenttracks_list" style="display:none; float:right; padding-right:0; text-align:left; margin-right:-65px; margin-top:45px;">Loading ...</div>
+     </div>
+   </section>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div style="margin-top:100px; text-align:center">
-    <img src="images/jahmomentlogo.png">
-    <h1>Bem-Vindos à Jah Moment Radio (online 24h por dia)</h1>
-    <h3>Vamos estar online a partir do dia 4 de Maio. Ate Jah</h3>
+
+   <!-- HOME -->
+   <section class="home-page">
+   <div class="header home">
+    <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+      <div class="w-container">
+        <a class="w-nav-brand" onclick="show()">
+          <img class="nav-logo" src="images/nav-logo.png" alt="532e1c3df921ec1c7c00082f_nav-logo.png">
+        </a>
+        <nav class="w-nav-menu nav-menus" role="navigation" style="cursor:pointer">
+          <a class="w-nav-link li" onclick="showHome()">HOME</a>
+          <a class="w-nav-link li" onclick="showCultura()">CULTURA</a>
+          <a class="w-nav-link li" onclick="showArtistas()">ARTISTAS</a>
+          <a class="w-nav-link btn-jahshop" onclick="showJahshop()">JAH SHOP</a>
+        </nav>
+        <div class="w-nav-button menu-drop">
+          <div class="w-icon-nav-menu icon-drop"></div>
+        </div>
+      </div>
     </div>
+    <div class="w-container header-cont">
+      <img class="w-hidden-small icon-wave" src="images/icon-waves.png" width="90" alt="532e1e414d4c2824690008fa_icon-waves.png">
+      <h1 class="headline">A TUA RÁDIO DE REGGAE</h1>
+      <h3 class="w-hidden-small w-hidden-tiny headline2">LIBERTA-TE AO SOM DA JAH MOMENT</h3>
+      <div class="radio-play" onclick="playradio()" style="margin:0 auto; text-align:center; cursor:pointer; margin-top:30px;">
+        <div class="icon-play"><img src="images/icon-play.png"/></div>
+        <h4><strong>clica </strong>para ouvir</h4>
+      </div>      
+      <div class="radio-pause" onclick="pauseradio()" style="text-align:center; display:none; cursor:pointer; margin-top:30px;">
+        <div class="icon-pause"><img src="images/icon-pause.png"/></div>
+        <h4>a disfrutar...</h4>
+      </div>
+    </div>
+  </div>
+  <img class="icon-flag" src="images/icon-flag.png" alt="532e3af8f8a1091d7c0009f2_icon-flag.png">
+  <div class="main">
+    <div class="w-container eventos">
+      <div class="w-clearfix title">
+        <img class="icon-events" src="images/icon-events.png" alt="532e24b64d4c282469000921_icon-events.png">
+        <h2>PRÓXIMOS MOMENTOS</h2>
+      </div>
+      <div class="w-slider slider" data-animation="slide" data-duration="1000" data-infinite="1" data-easing="ease-in-out">
+        <div class="w-slider-mask">
+          <div class="w-slide slide3"><a class="button sabermais" href="http://www.sumolsummerfest.com/" target="_blank">Saber Mais</a>
+          </div>
+          <div class="w-slide slide4"><a class="button sabermais" href="http://www.positivevibes.pt/" target="_blank">Saber Mais</a>
+          </div>
+          <div class="w-slide slide5"><a class="button sabermais" href="https://festivalmusa.org/" target="_blank">Saber Mais</a>
+          </div>
+          <div class="w-slide w-clearfix slide1"><a class="button ver-momento" href="https://www.youtube.com/watch?v=jcYnld55_m8" target="_blank">Ver Momento</a>
+          </div>
+          <div class="w-slide w-clearfix slide2"><a class="button ver-momento" href="https://www.youtube.com/watch?v=E20HxC92XY0" target="_blank">Ver Momentos</a>
+          </div>
+          <div class="w-slide slide6"><a class="button ver-momento" href="http://www.positivevibes.pt/" target="_blank">Ver Momento</a>
+          </div>
+        </div>
+        <div class="w-slider-arrow-left w-hidden-small w-hidden-tiny">
+          <div class="w-icon-slider-left w-hidden-small arrow"></div>
+        </div>
+        <div class="w-slider-arrow-right w-hidden-small w-hidden-tiny">
+          <div class="w-icon-slider-right arrow"></div>
+        </div>
+        <div class="w-slider-nav w-round marks"></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-container cont-2">
+    <div class="w-row">
+      <div class="w-col w-col-7 w-clearfix sessoes">
+        <div class="w-clearfix title sessoes">
+          <img class="icon-sessoes" src="images/icon-sessions.png" alt="532e2ec6a70ae62669000960_icon-sessions.png">
+          <h2>RÁDIO SESSIONS</h2>
+        </div>
+        <div class="img-estilo">
+          <h2 class="estilo">Qual é o teu estilo?</h2>
+          <div class="img-sessions"></div>
+          <h3 class="estilo2">Estamos a preparar sessões de rádio<br>dedicadas <strong>aos teus géneros favoritos.</strong></h3>
+        </div>
+      </div>
+      <div class="w-col w-col-5 w-hidden-tiny chat">
+        <div class="w-clearfix title chat">
+          <img class="icon-events" src="images/icon-chat.png" alt="532e2f6aa70ae62669000964_icon-chat.png">
+          <h2>CHAT</h2>
+        </div>
+        <div class="chatspace">
+          <script id="sid0020000056692529238">(function() {function async_load(){s.id="cid0020000056692529238";s.src='http://st.chatango.com/js/gz/emb.js';s.style.cssText="width:100%;height:515px;";s.async=true;s.text='{"handle":"jahmomentchat","arch":"js","styles":{"a":"e7e7e7","b":95,"c":"606060","d":"202020","f":95,"g":"202020","i":95,"k":"d8d8d8","l":"d8d8d8","m":"cccccc","o":95,"q":"d8d8d8","r":95,"t":0,"u":1,"usricon":0,"surl":0,"allowpm":0,"cnrs":"0.33"}}';var ss = document.getElementsByTagName('script');for (var i=0, l=ss.length; i < l; i++){if (ss[i].id=='sid0020000056692529238'){ss[i].id +='_';ss[i].parentNode.insertBefore(s, ss[i]);break;}}}var s=document.createElement('script');if (s.async==undefined){if (window.addEventListener) {addEventListener('load',async_load,false);}else if (window.attachEvent) {attachEvent('onload',async_load);}}else {async_load();}})();</script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-container concept">
+    <div class="title conceito">
+      <h2 class="conceito-title">CONCEITO</h2>
+    </div>
+    <div class="w-row">
+      <div class="w-col w-col-4 bullet-radio">
+        <img class="icon-radio" src="images/icon-radio.png" alt="532e374bf921ec1c7c0008e2_icon-radio.png">
+        <h2 class="title-concept">Rádio</h2>
+        <p class="conceito-p">A Jah Moment proporciona-te as melhores vibrações ao ritmo do melhor reggae, 24 horas por dia.</p>
+      </div>
+      <div class="w-col w-col-4">
+        <img class="icon-cultura" src="images/icon-cultura.png" alt="532e3756f921ec1c7c0008e3_icon-cultura.png">
+        <h2 class="title-concept">Cultura</h2>
+        <p class="conceito-p">O nosso objetivo é &nbsp;a mensagem chegar a todos, aqui podes encontrar artigos em resposta às tuas questões.</p>
+      </div>
+      <div class="w-col w-col-4">
+        <img class="icon-artistas" src="images/icon-artistas.png" alt="532e37914d4c2824690009f8_icon-artistas.png">
+        <h2 class="title-concept">Artistas</h2>
+        <p class="conceito-p">A promoção e o apoio a artistas que queiram elevar a música reggae em Portugal é uma das nossas missões,</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
+<!-- CULTURA -->
+<section class="cultura-page" style="display:none;">
+  <div class="header cultura">
+    <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+      <div class="w-container">
+        <a class="w-nav-brand" href="#">
+          <img class="nav-logo" src="images/nav-logo.png" alt="532e1c3df921ec1c7c00082f_nav-logo.png">
+        </a>
+        <nav class="w-nav-menu nav-menus" role="navigation" style="cursor:pointer">
+          <a class="w-nav-link li" onclick="showHome()">HOME</a>
+          <a class="w-nav-link li" onclick="showCultura()">CULTURA</a>
+          <a class="w-nav-link li" onclick="showArtistas()">ARTISTAS</a>
+          <a class="w-nav-link btn-jahshop" onclick="showJahshop()">JAH SHOP</a>
+        </nav>
+        <div class="w-nav-button menu-drop">
+          <div class="w-icon-nav-menu icon-drop"></div>
+        </div>
+      </div>
+    </div>
+    <div class="w-container header-cont">
+      <h1>CULTURA</h1>
+      <h3 class="about-page">O que sabes sobre a ideologia rastafári? Pretendemos fazer uma reflexão partindo de vários tópicos sobre a cultura rasta em paralelo com o sistema em que vivemos.
+        Um dos nossos objectivos é informar o massivo, sobre esta ideologia e o que representa para nós, pois em Portugal, é um tema pouco debatido.
+        Rastafári está muito para além do cabelo, é a igualdade, a força de vontade para mudar o que está mal no sistema e ajudarmo-nos mutuamente para o bem comum.</h3>
+      </div>
+    </div>
+    <img class="icon-flag" src="images/icon-flag.png" alt="532e3af8f8a1091d7c0009f2_icon-flag.png">
+    <div class="main"></div>
+    <div class="w-container em-construcao" style="padding-top:10%; margin:0 auto; text-align:center">
+      <div style="max-width:100%; height:auto"><img src="images/icon-construcao.png"></div>
+      <h1 style="color:#202020; text-align:center; padding-top:20px">EM CONSTRUÇÃO</h2>
+    </div>
+  </section>
+
+    
+    <!-- ARTISTAS -->
+    <section class="artistas-page" style="display:none">
+      <div class="header artistas">
+        <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+          <div class="w-container">
+            <a class="w-nav-brand" href="#">
+              <img class="nav-logo" src="images/nav-logo.png" alt="532e1c3df921ec1c7c00082f_nav-logo.png">
+            </a>
+            <nav class="w-nav-menu nav-menus" role="navigation" style="cursor:pointer">
+              <a class="w-nav-link li" onclick="showHome()">HOME</a>
+              <a class="w-nav-link li" onclick="showCultura()">CULTURA</a>
+              <a class="w-nav-link li" onclick="showArtistas()">ARTISTAS</a>
+              <a class="w-nav-link btn-jahshop" onclick="showJahshop()">JAH SHOP</a>
+            </nav>
+            <div class="w-nav-button menu-drop">
+              <div class="w-icon-nav-menu icon-drop"></div>
+            </div>
+          </div>
+        </div>
+        <div class="w-container header-cont">
+          <h1>ARTISTAS</h1>
+          <h3 class="about-page">Que artistas de reggae andam por aí? A verdade é que cada vez mais existem novos talentos na música reggae em Portugal, mas infelizmente na obscuridade do sistema babilónico. Estamos aqui para promover o trabalho de artistas que tenham como aspiração a música reggae e tornar o seu trabalho cada vez mais conhecido ao nosso público. Se também tens talento, vem promover aqui o teu trabalho para ser ouvido na nossa rádio. <i>jahmoment@gmail.com</i></h3>
+        </div>
+      </div>
+      <img class="icon-flag" src="images/icon-flag.png" alt="532e3af8f8a1091d7c0009f2_icon-flag.png">
+      <div class="main"></div>
+      <div class="w-container cont-artistas">
+        <div class="artista">
+          <div class="w-row">
+            <div class="w-col w-col-9 sobre-artista">
+              <img class="img-vando" src="images/img-vando.png" width="150" alt="532e418da70ae626690009b2_img-vando.png">
+              <h2>Vando Streets</h2>
+              <h4 class="nacionalidade">CABO VERDE</h4>
+              <p class="descricao-artista">Desde cedo que Portugal é o seu país, mas é nas raízes da sua língua materna que encontra inspiraçao nas suas letras que revelam a personalidade e o talento natural deste Artista, que tem como seu principal objetivo passar a mensagem contra
+                o sistema da babilónia.
+                <br>Para além do reggae dedica-se também ao Hip-Hop.
+                <br>Um verdadeiro talento em ascensão que a Jah Moment tem bastante orgulho em apoiar.</p>
+              </div>
+              <div class="w-col w-col-3 w-clearfix links-artista">
+                <div class="w-clearfix artist-social">
+                  <a class="w-inline-block artista-facebook" href="https://www.facebook.com/vandostreets?fref=ts" target="_blank">
+                    <img src="images/artist-facebook.png" alt="532e45eba70ae626690009fc_artist-facebook.png">
+                  </a>
+                  <a class="w-inline-block artist-youtube vando" href="https://www.youtube.com/results?search_query=vando%20streets&amp;sm=3" target="_blank">
+                    <img src="images/artist-youtube.png" alt="532e468ea70ae62669000a01_artist-youtube.png">
+                  </a>
+                </div>
+                <div class="sample">         
+                  <audio controls 
+                  src="media/momento-imaginario.mp3" type="audio/mpeg" style="width:100%; margin-top:20px; float:right">
+                </audio></div>
+              </div>
+            </div>
+          </div>
+          <div class="artista">
+            <div class="w-row">
+              <div class="w-col w-col-9 w-clearfix sobre-artista">
+                <img class="img-vando" src="images/img-bob.png" width="150" alt="532e47f3f8a1091d7c000a4c_img-bob.png">
+                <h2>Bob Figurante</h2>
+                <h4 class="nacionalidade">MOÇAMBIQUE</h4>
+                <p class="descricao-artista">Como Selecta (DJ), o moçambicano Bob Figurante é sem dúvida um dos grandes e incansáveis divulgadores desta cultura em Portugal, a dispensar grandes apresentações.
+                  Tendo-lhe sido atribuído estatuto de embaixador do Reggae em Portugal, figura incontornável graças ao seu conhecimento profundo e dedicação a esta cultura/filosofia/modo de vida desde finais dos anos 80. Ao lado da Taking Over Productions onde actualmente ocupa o cargo de assistente de produção, trouxeram a Portugal nos últimos 5 anos artistas de renome, alguns dos quais escreveram a história do reggae desde que este nasceu.
+                </p>
+              </div>
+              <div class="w-col w-col-3 w-clearfix links-artista">
+                <div class="w-clearfix artist-social">
+                  <a class="w-inline-block artista-facebook miguel" href="https://www.facebook.com/Selecta.BobFigurante" target="_blank">
+                    <img src="images/artist-facebook.png" alt="532e45eba70ae626690009fc_artist-facebook.png">
+                  </a>
+                  <a class="w-inline-block artista-facebook miguel" href="http://www.mixcloud.com/Selecta_Bob" target="_blank">
+                    <img src="images/artist-mixcloud.png" alt="532e45eba70ae626690009fc_artist-facebook.png">
+                  </a>
+                  <a class="w-inline-block artist-youtube" href="https://www.youtube.com/channel/UCExjDSFrlkzeBTDMPEyTLpA" target="_blank">
+                    <img src="images/artist-youtube.png" alt="532e468ea70ae62669000a01_artist-youtube.png">
+                  </a>
+                </div>
+                <div class="sample">         
+                  <audio controls 
+                  src="media/.mp3" type="audio/mpeg" style="width:100%; margin-top:20px; float:right">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="artista">
+          <div class="w-row">
+            <div class="w-col w-col-9 w-clearfix sobre-artista">
+              <img class="img-vando" src="images/img-charuto.png" width="150" alt="532e47f3f8a1091d7c000a4c_img-charuto.png">
+              <h2>Ras Xaruto</h2>
+              <h4 class="nacionalidade">ANGOLA</h4>
+              <p class="descricao-artista">Miguel desde muito cedo adotou como estilo de vida a ideologia rastafári.
+                <br>O contato com a música começou em África, mas foi em Portugal que conseguiu gravar as suas primeiras músicas. Apesar dos seus 46 anos de vida e nenhum disco lançado, a Jah Moment vê neste artista uma força de vontade enornme de evoluir e um
+                potencial para conseguir lançar o seu primeiro disco. Fiquem para ouvir o verdadeiro guerreiro de Jah.</p>
+              </div>
+              <div class="w-col w-col-3 w-clearfix links-artista">
+                <div class="w-clearfix artist-social">
+                  <a class="w-inline-block artista-facebook miguel" href="https://www.facebook.com/charrutofaya.charutofaya?fref=ts" target="_blank">
+                    <img src="images/artist-facebook.png" alt="532e45eba70ae626690009fc_artist-facebook.png">
+                  </a>
+                  <a class="w-inline-block artist-youtube" href="https://www.youtube.com/results?search_query=ras+xaruto&sm=3" target="_blank">
+                    <img src="images/artist-youtube.png" alt="532e468ea70ae62669000a01_artist-youtube.png">
+                  </a>
+                </div>
+                <div class="sample">         
+                  <audio controls 
+                  src="media/Mama-RG2.mp3" type="audio/mpeg" style="width:100%; margin-top:20px; float:right">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="artista">
+          <div class="w-row">
+            <div class="w-col w-col-9 w-clearfix sobre-artista">
+              <img class="img-gandabroa" src="images/img-gandabroa.png" width="150" alt="532e4a57f921ec1c7c000972_img-gandabroa.png">
+              <h2>Ganda Broa Sound</h2>
+              <h4 class="nacionalidade">PORTUGAL</h4>
+              <p class="descricao-artista">Ganda Broa Sound nasceu em Março de 2011, composto por 2 jovens amigos (João Fitas - Selecta Tapes e Gonçalo Malcata - Mr Capi Capi) que partilham o gosto pela música e cultura jamaicana. Cedo começaram a transmitir a sua energia e gosto por
+                esta cultura, passando assim uma mensagem positiva ao ritmo do melhor reggae e dancehall jamaicano.&nbsp;</p>
+              </div>
+              <div class="w-col w-col-3 w-clearfix links-artista">
+                <div class="w-clearfix artist-social">
+                  <a class="w-inline-block artista-facebook gandabroa" href="https://www.facebook.com/gandabroasound?fref=ts" target="_blank">
+                    <img src="images/artist-facebook.png" alt="532e45eba70ae626690009fc_artist-facebook.png">
+                  </a>
+                  <a class="w-inline-block artista-facebook gandabroa" href="https://soundcloud.com/gbsoundsystem" target="_blank">
+                    <img src="images/artist-soundcloud.png" alt="532e468ea70ae62669000a01_artist-soundcloud.png">
+                  </a>
+                  <a class="w-inline-block artist-youtube gandabroa" href="https://www.youtube.com/results?search_query=ganda%20broa%20sound&amp;sm=3" target="_blank">
+                    <img src="images/artist-youtube.png" alt="532e468ea70ae62669000a01_artist-youtube.png">
+                  </a>
+                </div>
+                <div class="sample">         
+                  <audio controls 
+                  src="media/grace-riddim.wav" type="audio/wav" style="width:100%; margin-top:20px; float:right">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- JAH SHOP -->
+    <section class="jahshop-page" style="display:none">
+      <div class="header jahshop">
+        <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+          <div class="w-container">
+            <a class="w-nav-brand" href="#">
+              <img class="nav-logo" src="images/nav-logo.png" alt="532e1c3df921ec1c7c00082f_nav-logo.png">
+            </a>
+            <nav class="w-nav-menu nav-menus" role="navigation" style="cursor:pointer">
+              <a class="w-nav-link li" onclick="showHome()">HOME</a>
+              <a class="w-nav-link li" onclick="showCultura()">CULTURA</a>
+              <a class="w-nav-link li" onclick="showArtistas()">ARTISTAS</a>
+              <a class="w-nav-link btn-jahshop" onclick="showJahshop()">JAH SHOP</a>
+            </nav>
+            <div class="w-nav-button menu-drop">
+              <div class="w-icon-nav-menu icon-drop"></div>
+            </div>
+          </div>
+        </div>
+        <div class="w-container header-cont">
+          <h1>JAH SHOP</h1>
+          <h3 class="about-page">O que procuras tu? A nossa loja online tem os mais variados produtos relacionados com a cultura rasta para ti, desde bandeiras, mixtapes, camisolas, a muitos outros artigos. A venda destes produtos na Jah Moment reverte exclusivamente para a manutenção do site, e para podermos apostar mais e mais na música reggae em Portugal.</h3>
+        </div>
+      </div>
+      <img class="icon-flag" src="images/icon-flag.png" alt="532e3af8f8a1091d7c0009f2_icon-flag.png">
+      <div class="main"></div>
+      <div class="w-container em-construcao" style="padding-top:10%; margin:0 auto; text-align:center">
+      <div style="max-width:100%; height:auto"><img src="images/icon-construcao.png"></div>
+      <h1 style="color:#202020; text-align:center; padding-top:20px">EM CONSTRUÇÃO</h2>
+    </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="w-container">
+        <div class="w-row">
+          <div class="w-col w-col-5">
+            <nav class="w-nav-menu nav-footer" role="navigation" style="cursor:pointer;">
+              <a class="w-nav-link li-footer" onclick="showHome()">HOME</a>
+              <a class="w-nav-link li-footer" onclick="showCultura()">CULTURA</a>
+              <a class="w-nav-link li-footer" onclick="showArtistas()">ARTISTAS</a>
+              <a class="w-nav-link li-footer" onclick="showJahshop()">JAH SHOP</a>
+            </nav>
+          </div>
+          <div class="w-col w-col-2">
+            <img class="logo-footer" src="images/logo-footer.png" alt="532e2910f8a1091d7c000982_logo-footer.png">
+          </div>
+          <div class="w-col w-col-5">
+            <nav class="w-nav-menu nav-footer social" role="navigation">
+              <a class="w-inline-block facebook" href="https://www.facebook.com/Jahmoment.comPT?fref=ts" target="_blank">
+                <img class="icon-social" src="images/icon-facebook.png" alt="532e2c624d4c282469000977_icon-facebook.png">
+              </a>
+              <a class="w-inline-block mixcloud" href="http://www.mixcloud.com/JahMoment/" target="_blank">
+                <img class="icon-social" src="images/icon-mixcloud.png" alt="532e2d984d4c282469000983_icon-mixcloud.png">
+              </a>
+              <a class="w-inline-block youtube" href="https://www.youtube.com/user/jahmoment/videos" target="_blank">
+                <img class="icon-social" src="images/icon-youtube.png" alt="532e2d3bf921ec1c7c0008ae_icon-youtube.png">
+              </a>
+              <a class="w-inline-block soundcloud" href="https://soundcloud.com/jah-moment" target="_blank">
+                <img class="icon-social" src="images/icon-soundcloud.png" alt="532e2cce4d4c282469000980_icon-soundcloud.png">
+              </a>
+              <a class="w-inline-block instagram" href="http://instagram.com/jahmomentradio" target="_blank">
+                <img class="icon-social" src="images/icon-instagram.png" alt="532e2db9a70ae62669000956_icon-instagram.png">
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="sub-footer">
+      <div class="w-container cont-sub">
+        <img class="icon-footer" src="images/icon-footer.png" alt="532e29aef921ec1c7c0008a1_icon-footer.png">
+        <div class="copyright"><strong>All lefts reserved Jah Moment © 2014</strong> | <em>created by<a href="http://www.diogoquaresma.com" class="text-link" target="_blank"> Diogo Quaresma</a></em>
+        </div>
+      </div>
+    </div>
+    <script language="javascript" type="text/javascript" src="http://185.32.189.221:2199/system/streaminfo.js"></script>
+    <script language="javascript" type="text/javascript" src="http://185.32.189.221:2199/system/recenttracks.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/webflow.js"></script>
   </body>
-</html>
+  </html>

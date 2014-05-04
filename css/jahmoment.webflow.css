@@ -1,0 +1,1122 @@
+body {
+  margin-bottom: 0px;
+  background-color: #f4f4f4;
+  font-family: Lato, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+h1 {
+  display: block;
+  margin: 20px auto 10px;
+  color: white;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  text-align: left;
+}
+h2 {
+  display: block;
+  margin: 5px auto;
+  float: none;
+  color: #202020;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: left;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: center;
+}
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #e39725;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: none;
+  color: #999;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*STREAM BAR*/
+
+.radio-bar{
+  background-color: #181818;
+  height: 45px;
+  z-index: 2001;
+}
+
+#cc_recenttracks_jahmomen{
+  display: none;
+  background-color: #202020;
+  padding-bottom: 10px;
+  margin-top:12px;
+  cursor: text;
+}
+
+.ccnowplaying .ccartist{
+  display: none!important;
+}
+
+.cctrack{
+  display:none;
+  margin-left: -55px;
+  padding-right: 25px;
+  margin-top: 10px;
+}
+
+.cctrack .cctitle{
+  font-size: 16px;
+  color:#efefef !important;
+}
+
+.cctrack .ccartist{
+  opacity: 0.5;
+}
+
+.cctrack .cccover{
+  display: none;
+}
+
+.cctrack .cctime{
+  display:none;
+}
+
+.cctrack .ccalbum{
+  display: none;
+}
+
+.cctrack a.ccbuy{
+  display: none;
+}
+
+
+
+/* HOME*/
+.headline2{
+  font-size: 24px;
+}
+
+
+.navbar {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  max-height: 100px;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.li {
+  padding-top: 40px;
+  padding-bottom: 38px;
+  color: #f0f0f0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.li:hover {
+  border-bottom: 2px solid #e39725;
+}
+.li.w--current {
+  padding-top: 40px;
+  padding-bottom: 38px;
+  color: #f0f0f0;
+}
+.header {
+  height: 750px;
+  background-image: url('../images/header-img.jpg');
+  background-position: 50% 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header.cultura {
+  height: 400px;
+  margin-top: 0px;
+  background-image: url('../images/cultura-img.jpg');
+  background-position: 30% 22%;
+}
+.header.home {
+  background-image: url('../images/header-img.jpg');
+  background-position: 50% 50%;
+}
+.header.artistas {
+  height: 400px;
+  background-image: url('../images/artistas-img.jpg');
+  background-position: 50% 9%;
+}
+.header.jahshop {
+  height: 400px;
+  background-image: url('../images/jahshop-img.jpg');
+}
+.icon-wave {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.header-cont {
+  margin-top: 50px;
+}
+.btn-jahshop {
+  margin-top: 28px;
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color: #f0f0f0;
+  font-size: 16px;
+}
+.btn-jahshop:hover {
+  border-color: #e39725;
+}
+.btn-jahshop.w--current {
+  color: #ebe4e4;
+}
+
+
+.icon-play{
+  width: 30%; 
+  height: auto; 
+  margin: 0 auto;
+} 
+
+.icon-play:hover {
+  opacity: 0.7;
+}
+
+.icon-pause{
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.icon-pause:hover {
+  opacity: 0.7;
+}
+
+.main {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: inline;
+}
+.eventos {
+  margin-top: 70px;
+}
+.title {
+  display: block;
+  width: 399px;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+  float: none;
+}
+.icon-events {
+  margin-top: -5px;
+  padding-right: 25px;
+  float: left;
+}
+.slider {
+  height: 490px;
+}
+
+.w-slider-dot{
+  height: 10px;
+  width:10px;
+}
+
+.button.ver-momento {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  margin-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: #e39725;
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.button.ver-momento:hover {
+  opacity: 1;
+}
+
+.button.sabermais {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  margin-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: #202020;
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.button.sabermais:hover {
+  opacity: 1;
+}
+
+
+
+.arrow {
+  opacity: 0.3;
+}
+.arrow:hover {
+  opacity: 0.8;
+}
+.footer {
+  position: static;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  display: block;
+  height: 130px;
+  margin-top: 100px;
+  padding-top: 25px;
+  background-color: #202020;
+}
+.link-radio {
+  display: block;
+  width: 155px;
+  height: 155px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.logo-footer {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.sub-footer {
+  display: block;
+  height: 50px;
+  background-color: #2a2a2a;
+}
+.icon-footer {
+  padding-top: 20px;
+  float: right;
+}
+.copyright {
+  padding-top: 15px;
+  color: #999;
+}
+.text-link {
+  border-top-style: none;
+  color: #9c9c9c;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.li-footer {
+  padding: 0px 15px 0px 20px;
+  opacity: 0.7;
+  color: #999;
+}
+.li-footer:hover {
+  opacity: 1;
+}
+.li-footer.w--current {
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  float: none;
+  color: #999;
+  text-align: left;
+}
+.nav-footer {
+  margin-top: 28px;
+  float: left;
+}
+.nav-footer.social {
+  width: 100%;
+  margin-top: 24px;
+  padding-bottom: 0px;
+  float: none;
+  border-bottom-style: none;
+}
+.icon-social {
+  padding-right: 15px;
+  padding-left: 15px;
+  opacity: 0.5;
+}
+.icon-social:hover {
+  opacity: 1;
+}
+.sessoes {
+  margin-bottom: 30px;
+  float: left;
+  clear: none;
+}
+.cont-2 {
+  margin-top: 80px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
+}
+.chat {
+  margin-bottom: 32px;
+}
+.img-estilo {
+  width: 530px;
+  height: 515px;
+  float: left;
+  clear: both;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(211, 211, 211, 0.8);
+  border-radius: 5px;
+  background-color: rgba(231, 231, 231, 0.70);
+}
+.estilo {
+  margin-top: 30px;
+  float: none;
+  color: #999;
+  text-align: center;
+}
+.img-sessions {
+  display: block;
+  width: 100%;
+  height: 270px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: 0px;
+  background-image: url('../images/img-sessions.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.estilo2 {
+  margin-top: 30px;
+  color: #202020;
+}
+.chatspace {
+  height: 520px;
+  margin-top: 0px;
+  background-color: #efefef;
+}
+.conceito {
+  display: block;
+  width: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  float: none;
+  text-align: center;
+}
+.concept {
+  margin-top: 50px;
+}
+.icon-radio {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 10px;
+}
+.icon-cultura {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 10px;
+}
+.icon-artistas {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 10px;
+}
+.bullet-radio {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.title-concept {
+  font-size: 24px;
+  text-align: center;
+}
+.icon-flag {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.em-construcao {
+  height: 550px;
+  margin-top: 80px;
+}
+.headline {
+  font-size: 48px;
+  text-align: center;
+}
+.about-page {
+  opacity: 0.7;
+  text-align: left;
+}
+.artista {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  border-bottom: 1px none lightgrey;
+}
+.cont-artistas {
+  margin-top: 50px;
+}
+.img-vando {
+  margin-right: 30px;
+  padding-bottom: 100px;
+  float: left;
+}
+.descricao-artista {
+  width: 100%;
+  float: none;
+  text-align: left;
+}
+.nacionalidade {
+  display: inline-block;
+  margin-top: 0px;
+  float: none;
+  clear: none;
+  text-align: left;
+}
+.social {
+  width: 90%;
+  padding-bottom: 20px;
+  float: right;
+  border-bottom: 1px solid lightgrey;
+}
+.sample {
+  width: 90%;
+  height: 50px;
+  margin-top: 20px;
+  padding-top: 0px;
+  float: right;
+  background-color: #efefef;
+}
+.artista-facebook {
+  padding-left: 20px;
+  float: right;
+  opacity: 0.8;
+}
+.artista-facebook:hover {
+  opacity: 1;
+}
+.artist-youtube {
+  float: right;
+  opacity: 0.8;
+}
+.artist-youtube:hover {
+  opacity: 1;
+}
+.artist-social {
+  width: 90%;
+  padding-bottom: 20px;
+  float: right;
+  border-bottom: 1px solid lightgrey;
+}
+.img-gandabroa {
+  margin-right: 30px;
+  padding-bottom: 70px;
+  float: left;
+}
+.icon-sessoes {
+  padding-right: 25px;
+  float: left;
+}
+.conceito-p {
+  font-size: 16px;
+  text-align: center;
+}
+.radio-frame {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  margin-top: -60px;
+  background-color: #202020;
+}
+
+.slide1 {
+  background-image: url('../images/cartaz_jahcoustix.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.8 !important;
+}
+
+.slide2 {
+  background-image: url('../images/cartaz_kintalreggae.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.8 !important;
+}
+.slide3 {
+  background-image: url('../images/cartaz_sumol.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.slide4 {
+  background-image: url('../images/cartaz_positivevibes.jpg');
+  background-size: 100%;
+}
+.slide5 {
+  background-image: url('../images/cartaz_musa.jpg');
+  background-size: 100%;
+}
+
+.slide6 {
+  background-image: url('../images/cartaz_biga.jpg');
+  background-size: 100%;
+  opacity: 0.8 !important;
+}
+
+
+.conceito-title {
+  float: none;
+  text-align: center;
+}
+.marks {
+  margin-top: auto;
+  padding-bottom: 0px;
+}
+
+
+@media (max-width: 991px) {
+  h2 {
+    float: none;
+  }
+  p {
+    float: none;
+  }
+  .li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: none;
+    clear: left;
+  }
+  .btn-jahshop {
+    border-style: none;
+  }
+  .title {
+    padding-bottom: 30px;
+  }
+  .slider {
+    position: relative;
+    height: 365px;
+  }
+  .li-footer {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .nav-footer {
+    width: 100%;
+    float: none;
+  }
+  .icon-social {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .sessoes {
+    position: static;
+    display: inline-block;
+    padding-bottom: 0px;
+  }
+  .chat {
+    display: inline-block;
+    padding-bottom: 0px;
+  }
+  .img-estilo {
+    width: 400px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .estilo {
+    margin-top: 0px;
+    float: none;
+  }
+  .img-sessions {
+    width: 392px;
+    height: 206px;
+    margin-left: 5px;
+    background-size: 380px;
+  }
+  .estilo2 {
+    font-size: 21px;
+  }
+  .chatspace {
+    height: 447px;
+  }
+  .title-concept {
+    float: none;
+  }
+  .about-page {
+    font-size: 20px;
+  }
+  .links-artista {
+    display: inline-block;
+  }
+  .sobre-artista {
+    display: block;
+  }
+  .img-vando {
+    padding-bottom: 100px;
+  }
+  .descricao-artista {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+  .nacionalidade {
+    float: none;
+  }
+  .img-gandabroa {
+    padding-bottom: 100px;
+  }
+  .conceito-p {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .icon-drop {
+    color: white;
+    font-size: 48px;
+  }
+  .menu-drop {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .menu-drop.w--open {
+    display: block;
+    float: right;
+    background-color: #202020;
+  }
+  .conceito-title {
+    float: none;
+  }
+  .nav-menus {
+    position: static;
+    z-index: 20;
+    display: inline-block;
+    width: 100%;
+    padding-left: 30px;
+    float: left;
+    background-color: #202020;
+  }
+  .slide5 {
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    width: 95%;
+  }
+  h2 {
+    width: 100%;
+    float: none;
+    text-align: left;
+  }
+  .header.home {
+    height: 570px;
+  }
+  .icon-events {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0px;
+    float: none;
+  }
+
+
+  .cctrack{
+  display:none !important;
+  margin-left: -55px;
+  padding-right: 25px;
+  margin-top: 10px;
+}
+  .slider {
+    height: 407px;
+  }
+  .slide1 {
+    background-size: 100%;
+  }
+  .footer {
+    position: static;
+    display: block;
+    height: auto;
+    margin-top: 50px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+  .logo-footer {
+    width: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .sub-footer {
+    margin-top: 0px;
+  }
+  .li-footer.w--current {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .nav-footer {
+    display: block;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    text-align: center;
+  }
+  .nav-footer.social {
+    margin-top: 0px;
+  }
+  .sessoes {
+    width: 100%;
+  }
+  .chat {
+    width: 100%;
+  }
+  .img-estilo {
+    width: 100%;
+  }
+  .img-sessions {
+    width: 460px;
+    height: 236px;
+    margin-top: 40px;
+    margin-left: auto;
+    background-size: 100%;
+  }
+  .headline {
+    font-size: 40px;
+  }
+  .about-page {
+    display: block;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .sample {
+    width: 100%;
+  }
+  .artist-social {
+    display: block;
+    width: 19%;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+  .img-gandabroa {
+    padding-bottom: 80px;
+  }
+  .icon-sessoes {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+  .conceito-p {
+    margin-bottom: 50px;
+  }
+  .slide2.slide6 {
+    background-position: 20% 0%;
+    background-size: 735px;
+    background-repeat: no-repeat;
+  }
+  .marks {
+    background-color: #202020;
+  }
+}
+@media (max-width: 479px) {
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    float: none;
+    font-size: 24px;
+    text-align: center;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .navbar {
+    height: auto;
+  }
+  .li {
+    position: static;
+    float: none;
+    clear: left;
+  }
+
+  .stream{
+    width: 100% !important;
+    margin-top: 7px !important;
+  }
+
+  .cctrack{
+  display:none !important;
+  margin-left: -55px;
+  padding-right: 25px;
+  margin-top: 10px;
+}
+
+
+  
+  .atocar{
+    display: none;
+  }
+
+  .ultimas-drop{
+    display:none !important;
+  }
+
+  #cc_strinfo_song_jahmomen{
+    display:none !important;
+  }
+
+  .streaming-details{
+    display:none !important;
+  }
+
+  .contmobile{
+    max-height: 45px !important;
+  }
+
+  .ver-momento{
+    margin-right:20px !important ;
+    margin-bottom: 50px !important; 
+  }
+
+  .sabermais{
+    margin-right: 20px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .header.cultura {
+    height: auto;
+    margin-top: 0px;
+  }
+  .header.home {
+    height: 619px;
+  }
+  .header.artistas {
+    height: auto;
+  }
+  .header.jahshop {
+    height: auto;
+    background-position: 24% 4%;
+  }
+  .header-cont {
+    margin-top: 30px;
+  }
+  .btn-jahshop {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .btn-jahshop:hover {
+    border-style: none;
+    border-width: 0px;
+  }
+  .main {
+    width: auto;
+  }
+  .title {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+  .slider {
+    height: 230px;
+  }
+  .slide1 {
+    background-size: 400px;
+  }
+
+  .w-slider-dot{
+  margin:0 8px 2.5em !important;
+}
+.w-slider-nav{
+  padding-top: 15px !important;
+}
+  .sub-footer {
+    position: static;
+    display: block;
+  }
+  .icon-footer {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+  .copyright {
+    padding-top: 10px;
+    background-color: #2a2a2a;
+    text-align: center;
+  }
+  .li-footer {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+  }
+  .li-footer.w--current {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .icon-social {
+    padding-bottom: 10px;
+  }
+  .img-estilo {
+    width: 100%;
+    height: auto;
+  }
+  .img-sessions {
+    width: 100%;
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 0px;
+    background-size: 300px;
+    text-align: center;
+  }
+  .estilo2 {
+    margin-top: 0px;
+    font-size: 16px;
+  }
+  .headline {
+    font-size: 34px;
+  }
+  .about-page {
+    display: block;
+    width: 90%;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    font-size: 18px;
+    text-align: center;
+  }
+  .cont-artistas {
+    margin-top: 50px;
+  }
+  .img-vando {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 0px;
+    float: none;
+  }
+  .descricao-artista {
+    width: 100%;
+    text-align: center;
+  }
+  .nacionalidade {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  .artist-social {
+    width: 50%;
+  }
+  .img-gandabroa {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 0px;
+    float: none;
+  }
+  .icon-sessoes {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0px;
+    float: none;
+  }
+  .slide2.slide6 {
+    background-position: 24% 0%;
+    background-size: 380px;
+  }
+  .slide3 {
+    background-position: 19% -32%;
+    background-size: 400px;
+  }
+  .slide4 {
+    background-position: 19% -34%;
+    background-size: 400px;
+    background-repeat: no-repeat;
+  }
+  .icon-drop {
+    color: white;
+  }
+  .menu-drop {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .menu-drop.w--open {
+    position: static;
+    display: inline-block;
+    float: left;
+    background-color: #202020;
+  }
+  .nav-menus {
+    position: relative;
+    z-index: 40;
+    padding-left: 10px;
+  }
+  .nav-logo {
+    width: 225px;
+    margin-top: 5px;
+  }
+  .slide5 {
+    background-position: 16% -32%;
+    background-size: 400px;
+  }
+}
