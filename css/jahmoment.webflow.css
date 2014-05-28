@@ -628,20 +628,30 @@ p {
   padding-bottom: 0px;
 }
 
-/* HOME */
+/* JAH SHOP */
 
-/* SOBRE NÓS */
+.item {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  padding: 10px;
+}
 
-/* CULTURA */
+/*.item:hover {
+  border-top: 2px solid #e39725;
+} */
 
-/* ARTISTAS */
+.item-title{
+  text-align: left;
+  margin-top: 15px;
+  font-size: 18px;
+  color:#333333;
+}
 
-/* JAH SHOP*/
-
-.item{
-  height: 200px;
-  width: 200px;
-  background-color:grey; 
+.item-price{
+  text-align: left;
+  font-size: 16px;
+  color:#999999;
 }
 
 
