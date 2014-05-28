@@ -628,6 +628,22 @@ p {
   padding-bottom: 0px;
 }
 
+/* HOME */
+
+/* SOBRE NÓS */
+
+/* CULTURA */
+
+/* ARTISTAS */
+
+/* JAH SHOP*/
+
+.item{
+  height: 200px;
+  width: 200px;
+  background-color:grey; 
+}
+
 
 @media (max-width: 991px) {
   h2 {
