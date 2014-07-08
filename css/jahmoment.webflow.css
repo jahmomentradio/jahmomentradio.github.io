@@ -602,6 +602,7 @@ p {
   background-image: url('../images/cartaz_sumol.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
+  opacity: 0.8 !important;
 }
 .slide4 {
   background-image: url('../images/cartaz_positivevibes.jpg');
@@ -610,6 +611,7 @@ p {
 .slide5 {
   background-image: url('../images/cartaz_musa.jpg');
   background-size: 100%;
+  opacity: 0.8 !important;
 }
 
 .slide6 {
