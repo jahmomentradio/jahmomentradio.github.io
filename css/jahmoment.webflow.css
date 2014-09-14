@@ -513,7 +513,7 @@ p {
 }
 .img-vando {
   margin-right: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
   float: left;
 }
 .descricao-artista {
@@ -540,7 +540,6 @@ p {
   margin-top: 20px;
   padding-top: 0px;
   float: right;
-  background-color: #efefef;
 }
 .artista-facebook {
   padding-left: 20px;
