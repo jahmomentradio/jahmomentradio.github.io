@@ -312,7 +312,7 @@ p {
 
 
 .arrow {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .arrow:hover {
   opacity: 0.8;
@@ -585,40 +585,18 @@ p {
 }
 
 .slide1 {
-  background-image: url('../images/cartaz_jahcoustix.jpg');
+  background-image: url('../images/cartaz_sintraFest.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   opacity: 0.8 !important;
 }
 
 .slide2 {
-  background-image: url('../images/cartaz_kintalreggae.jpg');
+  background-image: url('../images/cartaz_artRasta.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   opacity: 0.8 !important;
 }
-.slide3 {
-  background-image: url('../images/cartaz_sumol.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  opacity: 0.8 !important;
-}
-.slide4 {
-  background-image: url('../images/cartaz_positivevibes.jpg');
-  background-size: 100%;
-}
-.slide5 {
-  background-image: url('../images/cartaz_musa.jpg');
-  background-size: 100%;
-  opacity: 0.8 !important;
-}
-
-.slide6 {
-  background-image: url('../images/cartaz_biga.jpg');
-  background-size: 100%;
-  opacity: 0.8 !important;
-}
-
 
 .conceito-title {
   float: none;
