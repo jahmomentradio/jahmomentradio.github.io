@@ -585,18 +585,12 @@ p {
 }
 
 .slide1 {
-  background-image: url('../images/cartaz_sintraFest.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  opacity: 0.8 !important;
-}
-
-.slide2 {
   background-image: url('../images/cartaz_artRasta.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   opacity: 0.8 !important;
 }
+
 
 .conceito-title {
   float: none;
